@@ -1,12 +1,7 @@
 
-#### TRABAJO PRACTICO N° 1. CURRICULUM WEB - Matheu Santiago ####
-     -------------------------------------------------------
+# TRABAJO PRACTICO N° 1. CURRICULUM WEB - Matheu Santiago
 
 
-
-# ESPECIFICACIONES
-
-Este proyecto es un portafolio / Curriculum Vitae interactivo y completamente responsivo, diseñado y desarrollado para la materia **Programación 3** de la Tecnicatura Universitaria en Programación (TUP) de la **UTN Facultad Regional La Plata**.
 
 ## 🚀 Características Principales
 

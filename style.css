@@ -197,25 +197,31 @@ h3 {
     border-radius: 4px;
 }
 
-.language-toggle {
+.controls-wrapper {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.6rem;
     margin-left: 1rem;
     padding-left: 1.5rem;
     border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .lang-btn {
     background: none;
     border: none;
     color: var(--header-muted);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     transition: color var(--transition-speed) ease;
     font-family: inherit;
-    padding: 0.2rem 0.4rem;
+    padding: 0.1rem 0.2rem;
     border-radius: 4px;
 }
 
@@ -228,26 +234,24 @@ h3 {
 .lang-btn.active {
     color: var(--secondary-color);
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 2px;
 }
 
 .lang-separator {
     color: var(--header-muted);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    opacity: 0.5;
 }
 
 .theme-toggle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-left: 0.5rem;
-    padding-left: 1rem;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 0.4rem;
 }
 
 .theme-btn {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -760,8 +764,7 @@ h3 {
         gap: 0.8rem;
     }
 
-    .language-toggle,
-    .theme-toggle {
+    .controls-wrapper {
         margin-left: 0.3rem;
         padding-left: 0.6rem;
     }

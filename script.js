@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Palabras o frases que deben cambiar al cambiar el idioma
     const translations = {
         es: {
-            header_subtitle: "Desarrollador",
+            header_subtitle: "Estudiante de Programación",
             nav_about: "Sobre mí",
             nav_skills: "Habilidades",
             nav_experience: "Experiencia",
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_text: "&copy; 2026 Matheu Santiago. Creado para la materia Programación 3 - TUP UTN La Plata."
         },
         en: {
-            header_subtitle: "Developer",
+            header_subtitle: "Programming Student",
             nav_about: "About Me",
             nav_skills: "Skills",
             nav_experience: "Experience",

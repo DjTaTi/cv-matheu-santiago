@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es" id="html-tag">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Curriculum Vitae de Matheu Santiago, Estudiante de Programación y Desarrollador Web.">
+    <title>Matheu Santiago - Curriculum Vitae</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='70' font-size='55' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>MS</text></svg>" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+
+    <header role="banner" class="header">
+        <div class="container header-container">
+            <div class="profile-wrapper">
+                <div class="profile-image-container">
+                    <img src="img/perfil.jpg" alt="Foto de perfil de Matheu Santiago" class="profile-image"
+                        id="profile-picture">
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Matheu Santiago</h1>
+                    <p class="subtitle" data-i18n="header_subtitle">Desarrollador</p>
+                </div>
+            </div>
+
+            <button class="hamburger-btn" id="hamburger-menu" aria-label="Abrir menú" aria-expanded="false"
+                aria-controls="main-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav role="navigation" aria-label="Navegación principal" class="main-nav" id="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#about" aria-label="Ir a la sección Sobre mí" data-i18n="nav_about">Sobre mí</a></li>
+                    <li><a href="#skills" aria-label="Ir a la sección Habilidades"
+                            data-i18n="nav_skills">Habilidades</a></li>
+                    <li><a href="#experience" aria-label="Ir a la sección Experiencia"
+                            data-i18n="nav_experience">Experiencia</a></li>
+                    <li><a href="#education" aria-label="Ir a la sección Educación"
+                            data-i18n="nav_education">Educación</a></li>
+                    <li><a href="#projects" aria-label="Ir a la sección Portfolio"
+                            data-i18n="nav_projects">Portfolio</a></li>
+                    <li><a href="#contact" aria-label="Ir a la sección Contacto" data-i18n="nav_contact">Contacto</a>
+                    </li>
+                    <li class="language-toggle">
+                        <button id="lang-es" class="lang-btn active" aria-label="Cambiar a Español">ES</button>
+                        <span class="lang-separator">|</span>
+                        <button id="lang-en" class="lang-btn" aria-label="Switch to English">EN</button>
+                    </li>
+                    <li class="theme-toggle">
+                        <button class="theme-btn" data-theme-btn="light" aria-label="Tema Claro"
+                            style="background:#f8fafc; border: 2px solid #cbd5e1;"></button>
+                        <button class="theme-btn" data-theme-btn="dark" aria-label="Tema Oscuro"
+                            style="background:#0f172a; border: 2px solid #0ea5e9;"></button>
+                        <button class="theme-btn" data-theme-btn="vibrant" aria-label="Tema Vibrante"
+                            style="background:#2e1065; border: 2px solid #f97316;"></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <section id="about" class="section about-section" aria-labelledby="about-heading">
+            <div class="container fade-in">
+                <h2 id="about-heading" class="section-title" data-i18n="about_title">Sobre mí</h2>
+                <p data-i18n="about_desc">
+                    Soy desarrollador y estudiante de segundo año de la Tecnicatura Universitaria en Programación
+                    (UTN Facultad Regional La Plata).
+                    Me apasiona crear soluciones de software eficientes y accesibles, con un fuerte enfoque en el
+                    desarrollo Frontend y Backend.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills-section bg-light" aria-labelledby="skills-heading">
+            <div class="container fade-in">
+                <h2 id="skills-heading" class="section-title" data-i18n="skills_title">Habilidades Técnicas</h2>
+                <ul class="skills-list" aria-label="Lista de habilidades técnicas">
+                    <li class="skill-item"><i class="devicon-html5-plain colored" aria-hidden="true"></i> HTML</li>
+                    <li class="skill-item"><i class="devicon-css3-plain colored" aria-hidden="true"></i> CSS</li>
+                    <li class="skill-item"><i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+                        JavaScript</li>
+                    <li class="skill-item"><i class="devicon-typescript-plain colored" aria-hidden="true"></i>
+                        TypeScript</li>
+                    <li class="skill-item"><i class="devicon-python-plain colored" aria-hidden="true"></i> Python</li>
+                    <li class="skill-item"><i class="devicon-django-plain colored" aria-hidden="true"></i> Django</li>
+                    <li class="skill-item"><i class="devicon-java-plain colored" aria-hidden="true"></i> Java</li>
+                    <li class="skill-item"><i class="devicon-spring-original colored" aria-hidden="true"></i> SpringBoot
+                    </li>
+                    <li class="skill-item"><i class="devicon-c-plain colored" aria-hidden="true"></i> C</li>
+                    <li class="skill-item"><i class="devicon-react-original colored" aria-hidden="true"></i> React</li>
+                    <li class="skill-item"><i class="devicon-astro-plain colored" aria-hidden="true"></i> Astro</li>
+                    <li class="skill-item"><i class="devicon-tailwindcss-plain colored" aria-hidden="true"></i> Tailwind
+                        CSS</li>
+                    <li class="skill-item"><i class="devicon-mysql-plain colored" aria-hidden="true"></i> MySQL</li>
+                    <li class="skill-item"><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
+                        PostgreSQL</li>
+                    <li class="skill-item"><i class="devicon-photoshop-plain colored" aria-hidden="true"></i> Photoshop
+                    </li>
+                    <li class="skill-item"><i class="devicon-illustrator-plain colored" aria-hidden="true"></i>
+                        Illustrator</li>
+                    <li class="skill-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            fill="#217346" aria-hidden="true">
+                            <path
+                                d="M13.7 20.9 2.5 19V5l11.2-1.9v17.8zm1.5-16v14.3h5.9c.5 0 .9-.4.9-.9V5.8c0-.5-.4-.9-.9-.9h-5.9zm-6 10-1.8-2-1.7 2H4l2.8-3-2.6-3h1.8L7.7 11l1.6-2H11L8.3 12l2.9 3.2h-1.8z" />
+                        </svg>
+                        Microsoft Excel
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience-section" aria-labelledby="experience-heading">
+            <div class="container fade-in">
+                <h2 id="experience-heading" class="section-title" data-i18n="exp_title">Experiencia Laboral</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <h3 class="job-title" data-i18n="exp_job1_title">Desarrollador Independiente</h3>
+                            <p class="job-date"><time datetime="2020">2020</time> - <span
+                                    data-i18n="present">Actualidad</span></p>
+                            <p class="job-description" data-i18n="exp_job1_desc">Desarrollo y mantenimiento de
+                                aplicaciones web modernas, trabajando en base a requerimientos específicos de clientes y
+                                asegurando entregas de alta calidad.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <h3 class="job-title" data-i18n="exp_job2_title">Empleado Administrativo</h3>
+                            <p class="job-company" data-i18n="exp_job2_company">Secretaría General de la Gobernación de
+                                la Provincia de Buenos Aires</p>
+                            <p class="job-date"><time datetime="2003">2003</time> - <span
+                                    data-i18n="present">Actualidad</span></p>
+                            <p class="job-description" data-i18n="exp_job2_desc">Responsable de tareas administrativas,
+                                organización y gestión dentro del organismo, demostrando constancia y capacidad de
+                                adaptación.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section education-section bg-light" aria-labelledby="education-heading">
+            <div class="container fade-in">
+                <h2 id="education-heading" class="section-title" data-i18n="edu_title">Estudios</h2>
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="education-card">
+                        <h3 class="degree-title" data-i18n="edu_degree">Tecnicatura Universitaria en Programación</h3>
+                        <p class="institution">UTN Facultad Regional La Plata</p>
+                        <p class="education-date"><span data-i18n="edu_status">Estudiante de segundo año (Desde</span>
+                            <time datetime="2025">2025</time>)
+                        </p>
+                    </div>
+                    <div class="education-card">
+                        <h3 class="degree-title" data-i18n="edu_degree_en">Inglés - First Certificate</h3>
+                        <p class="institution" data-i18n="edu_inst_en"> First Certificate of English </p>
+                        <p class="education-date">1990 - 2000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+            <div class="container fade-in">
+                <h2 id="projects-heading" class="section-title" data-i18n="proj_title">Portfolio</h2>
+                <div class="projects-grid">
+                    <article class="project-card hover-img">
+                        <div class="project-bg"><img src="img/fines-heat-map.png" alt="Fines Heat Map"></div>
+                        <div class="project-info">
+                            <h3 class="project-title">Fines Heat Map</h3>
+                            <p class="project-description" data-i18n="proj_1_desc">Proyecto orientado a la visualización
+                                de datos censales y educativos usando mapas de calor.</p>
+                        </div>
+                        <a href="https://github.com/TUP25-UTN-La-Plata/fines-heat-map" target="_blank"
+                            rel="noopener noreferrer" class="project-link"
+                            aria-label="Ver el repositorio Fines Heat Map en GitHub"><span data-i18n="proj_btn">Ver
+                                Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-info">
+                            <h3 class="project-title">Habibi</h3>
+                            <p class="project-description" data-i18n="proj_2_desc">Aplicación o sistema independiente.
+                                Desarrollo integral enfocado a la resolución de problemas lógicos de negocio.</p>
+                        </div>
+                        <a href="https://github.com/DjTaTi/Habibi" target="_blank" rel="noopener noreferrer"
+                            class="project-link" aria-label="Ver el repositorio Habibi en GitHub"><span
+                                data-i18n="proj_btn">Ver Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article class="project-card hover-img">
+                        <div class="project-bg"><img src="img/coceres-propiedades.png" alt="Coceres Propiedades"></div>
+                        <div class="project-info">
+                            <h3 class="project-title">Coceres Propiedades</h3>
+                            <p class="project-description" data-i18n="proj_3_desc">Sistema de listado inmobiliario para
+                                la visualización y gestión de propiedades.</p>
+                        </div>
+                        <a href="https://github.com/luckidetrenque/coceres-propiedades" target="_blank"
+                            rel="noopener noreferrer" class="project-link"
+                            aria-label="Ver el repositorio Coceres Propiedades en GitHub"><span data-i18n="proj_btn">Ver
+                                Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article class="project-card hover-img">
+                        <div class="project-bg"><img src="img/hrs-frontend.png" alt="HRS Frontend"></div>
+                        <div class="project-info">
+                            <h3 class="project-title">HRS (Frontend)</h3>
+                            <p class="project-description" data-i18n="proj_4_desc">Interfaz de usuario desarrollada para
+                                la gestión de un club ecuestre (estudiantes, caballos, clases).</p>
+                        </div>
+                        <a href="https://github.com/luckidetrenque/Frontend-Proyecto-HRS" target="_blank"
+                            rel="noopener noreferrer" class="project-link"
+                            aria-label="Ver el repositorio Frontend Proyecto HRS en GitHub"><span
+                                data-i18n="proj_btn">Ver Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article class="project-card hover-img">
+                        <div class="project-bg"><img src="hrs-backend.png" alt="HRS Backend"></div>
+                        <div class="project-info">
+                            <h3 class="project-title">HRS (Backend)</h3>
+                            <p class="project-description" data-i18n="proj_5_desc">Lógica de servidor, base de datos y
+                                API para soportar la plataforma de gestión ecuestre HRS.</p>
+                        </div>
+                        <a href="https://github.com/luckidetrenque/Backend-Proyecto-HRS" target="_blank"
+                            rel="noopener noreferrer" class="project-link"
+                            aria-label="Ver el repositorio Backend Proyecto HRS en GitHub"><span
+                                data-i18n="proj_btn">Ver Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article class="project-card hover-img">
+                        <div class="project-bg"><img src="img/hrs-landing-page.png" alt="HRS Landing Page"></div>
+                        <div class="project-info">
+                            <h3 class="project-title">HRS Landing Page</h3>
+                            <p class="project-description" data-i18n="proj_6_desc">Página de aterrizaje publicitaria
+                                diseñada para ofrecer los servicios del software HRS a los clientes.</p>
+                        </div>
+                        <a href="https://github.com/DjTaTi/hrs-landing-page" target="_blank" rel="noopener noreferrer"
+                            class="project-link" aria-label="Ver el repositorio HRS Landing Page en GitHub"><span
+                                data-i18n="proj_btn">Ver Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section bg-light" aria-labelledby="contact-heading">
+            <div class="container fade-in">
+                <h2 id="contact-heading" class="section-title" data-i18n="contact_title">Contáctame</h2>
+                <form id="my-contact-form" action="https://formspree.io/f/xpqowjgy" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label" data-i18n="contact_name_label">Nombre</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label" data-i18n="contact_email_label">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label" data-i18n="contact_msg_label">Mensaje</label>
+                        <textarea id="message" name="message" class="form-textarea" required></textarea>
+                    </div>
+                    <p id="form-status" style="margin: 0; font-weight: 600; font-size: 0.95rem;"></p>
+                    <button type="submit" class="btn-submit" data-i18n="contact_btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" class="footer">
+        <div class="container">
+            <p><span data-i18n="footer_text">&copy; 2026 Matheu Santiago. Creado para la materia Programación 3 - TUP
+                    UTN La Plata.</span></p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">&uarr;</button>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <span class="close-modal" aria-label="Cerrar modal" title="Cerrar">&times;</span>
+        <img class="modal-content" id="modal-img" alt="Vista previa amplia del proyecto">
+        <div id="modal-caption"></div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

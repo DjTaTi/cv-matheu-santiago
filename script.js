@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Intersection Observer for animations
+    // Observer para las animaciones de scroll
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 
-    // Keyboard accessibility for links
+    // Accesibilidad por teclado para los links
     const navLinksList = document.querySelectorAll('.nav-links a');
     navLinksList.forEach(link => {
         link.addEventListener('focus', () => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Localization Logic ---
+    // Palabras o frases que deben cambiar al cambiar el idioma
     const translations = {
         es: {
             header_subtitle: "Desarrollador",
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setLanguage(lang) {
         if (!translations[lang]) return;
 
-        // Update DOM elements text
+        // Se muestran los textos en el idioma que se seleccionó
         dElements.forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang][key]) {
@@ -124,10 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update html lang attribute
+        // Se actualiza el atributo lang en la etiqueta del HTML
         htmlTag.setAttribute('lang', lang);
 
-        // Update active class on buttons
+        // Se actualiza el boton que determina el idioma
         if (lang === 'es') {
             btnEs.classList.add('active');
             btnEn.classList.remove('active');
@@ -136,21 +136,21 @@ document.addEventListener('DOMContentLoaded', () => {
             btnEs.classList.remove('active');
         }
 
-        // Save preference
+        // Guardamos el idioma en localStorage para que quede guardado
         localStorage.setItem('langPref', lang);
     }
 
-    // Events
+    // Se detecta el click en los botones de idioma
     btnEs.addEventListener('click', () => setLanguage('es'));
     btnEn.addEventListener('click', () => setLanguage('en'));
 
-    // Check user preference on load
+    // Se detecta si ya tenía un idioma guardado al cargar la página
     const savedLang = localStorage.getItem('langPref');
     if (savedLang) {
         setLanguage(savedLang);
     }
 
-    // --- Hamburger Menu Logic ---
+    // Menú hamburguesa
     const hamburgerBtn = document.getElementById('hamburger-menu');
     const mainNav = document.getElementById('main-nav');
 
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburgerBtn.addEventListener('click', toggleMenu);
 
-    // Close menu when clicking a link (mobile)
+    // Cerramos el menú cuando el usuario hace click en un link
     navLinksList.forEach(link => {
         link.addEventListener('click', () => {
             if (mainNav.classList.contains('active')) {
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Theme Logic ---
+    // Temas
     const themeBtns = document.querySelectorAll('.theme-btn');
     const rootHtmlVar = document.documentElement;
 
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Image Modal Logic ---
+    // Ventana modal para las imágenes
     const modal = document.getElementById("image-modal");
     const modalImg = document.getElementById("modal-img");
     const captionText = document.getElementById("modal-caption");
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     projectCards.forEach(card => {
         card.addEventListener('click', function (e) {
-            // Ignore click if it's on the repository link button
+            // Si tocan el botón del repo, no hacemos nada
             if (e.target.closest('.project-link')) return;
 
             const bgMap = this.querySelector('.project-bg img');
@@ -224,16 +224,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.setAttribute('aria-hidden', 'false');
                 modalImg.src = bgMap.src;
                 captionText.innerText = bgMap.alt;
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                document.body.style.overflow = 'hidden'; // Se bloquea el scroll con el modal abierto
             }
         });
     });
 
-    // Profile picture modal
+    // Modal de la foto de perfil
     const profilePic = document.getElementById("profile-picture");
     if (profilePic) {
         profilePic.style.cursor = 'pointer';
-        profilePic.addEventListener('click', function() {
+        profilePic.addEventListener('click', function () {
             modal.classList.add('show');
             modal.setAttribute('aria-hidden', 'false');
             modalImg.src = this.src;
@@ -242,17 +242,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close modal function
+    // Función que cierra el modal
     const hideModal = () => {
         modal.classList.remove('show');
         modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = 'auto'; // Restore scrolling
-        setTimeout(() => { modalImg.src = ''; }, 300); // Clear source after fade out
+        document.body.style.overflow = 'auto'; // Se vuelve a activar el scroll normal
+        setTimeout(() => { modalImg.src = ''; }, 300); // Se limpia el src de la foto
     };
 
     if (closeModal) closeModal.addEventListener('click', hideModal);
 
-    // Close modal when clicking entirely outside the image itself
+    // Click afuera del modal lo cierra
     if (modal) {
         modal.addEventListener('click', function (e) {
             if (e.target !== modalImg && e.target !== captionText) {
@@ -261,20 +261,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close on Escape key
+    // Tecla Escape cierra el modal
     document.addEventListener('keydown', function (event) {
         if (event.key === "Escape" && modal.classList.contains('show')) {
             hideModal();
         }
     });
 
-    // --- Contact Form AJAX Submission ---
+    // Envío del formulario por AJAX (así no recarga nada)
     const contactForm = document.getElementById("my-contact-form");
     const formStatus = document.getElementById("form-status");
 
     if (contactForm) {
         contactForm.addEventListener("submit", async function (event) {
-            event.preventDefault(); // Stop default Formspree redirect
+            event.preventDefault(); // Captura la redirección por defecto de Formspree
             formStatus.innerText = "Enviando...";
             formStatus.style.color = "var(--text-muted)";
 
@@ -288,12 +288,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     formStatus.innerText = "¡Mensaje enviado exitosamente!";
-                    formStatus.style.color = "#10b981"; // Success green
-                    contactForm.reset(); // Clear fields
-                    setTimeout(() => { formStatus.innerText = ""; }, 5000); // Clear message after 5s
+                    formStatus.style.color = "#10b981";
+                    contactForm.reset(); // Se limpia el formulario después de enviar
+                    setTimeout(() => { formStatus.innerText = ""; }, 5000); // Se limpia el mensaje de exito a los 5 segundos
                 } else {
                     formStatus.innerText = "Hubo un error al enviar el mensaje.";
-                    formStatus.style.color = "#ef4444"; // Error red
+                    formStatus.style.color = "#ef4444";
                 }
             } catch (error) {
                 formStatus.innerText = "Error de red. Intenta nuevamente.";
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Back to Top Logic ---
+    // Botón de volver al inicio
     const backToTopBtn = document.getElementById("back-to-top");
     if (backToTopBtn) {
         window.addEventListener("scroll", () => {

@@ -270,6 +270,21 @@ h3 {
     box-shadow: 0 0 0 2px var(--primary-color), 0 0 0 4px var(--secondary-color);
 }
 
+.theme-btn-light {
+    background: #f8fafc;
+    border: 2px solid #cbd5e1;
+}
+
+.theme-btn-dark {
+    background: #0f172a;
+    border: 2px solid #0ea5e9;
+}
+
+.theme-btn-vibrant {
+    background: #2e1065;
+    border: 2px solid #f97316;
+}
+
 .hamburger-btn {
     display: none;
     background: none;
@@ -393,6 +408,12 @@ h3 {
 }
 
 /* Tarjeta de educación */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .education-card {
     background: var(--card-bg);
     padding: 2rem;
@@ -415,6 +436,7 @@ h3 {
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
     transition: color var(--transition-speed);
+    text-decoration: none;
 }
 
 .education-date {
@@ -602,6 +624,12 @@ h3 {
 .form-textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+.form-status {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .btn-submit {

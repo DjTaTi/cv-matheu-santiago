@@ -336,6 +336,14 @@ h3 {
     outline: none;
 }
 
+.skill-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+
 /* Timeline de experiencia */
 .timeline {
     position: relative;

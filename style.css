@@ -2,16 +2,16 @@
     --primary-color: #1e293b;
     --secondary-color: #3b82f6;
     --accent-color: #2563eb;
-    --background-light: #e4ecf3;
-    --background-dark: #ffffff;
-    --text-main: #334155;
-    --text-muted: #64748b;
-    --header-text: #ffffff;
-    --header-muted: #cbd5e1;
-    --card-bg: #ffffff;
-    --card-border: #e2e8f0;
-    --input-bg: #ffffff;
-    --input-border: #cbd5e1;
+    --background-light-color: #e4ecf3;
+    --background-dark-color: #ffffff;
+    --text-main-color: #334155;
+    --text-muted-color: #64748b;
+    --header-text-color: #ffffff;
+    --header-muted-color: #cbd5e1;
+    --card-bg-color: #ffffff;
+    --card-border-color: #e2e8f0;
+    --input-bg-color: #ffffff;
+    --input-border-color: #cbd5e1;
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --container-width: 1100px;
     --transition-speed: 0.3s;
@@ -21,28 +21,28 @@
     --primary-color: #0f172a;
     --secondary-color: #0ea5e9;
     --accent-color: #38bdf8;
-    --background-light: #1e293b;
-    --background-dark: #020617;
-    --text-main: #f8fafc;
-    --text-muted: #cbd5e1;
-    --card-bg: #1e293b;
-    --card-border: #334155;
-    --input-bg: rgba(15, 23, 42, 0.8);
-    --input-border: #334155;
+    --background-light-color: #1e293b;
+    --background-dark-color: #020617;
+    --text-main-color: #f8fafc;
+    --text-muted-color: #cbd5e1;
+    --card-bg-color: #1e293b;
+    --card-border-color: #334155;
+    --input-bg-color: rgba(15, 23, 42, 0.8);
+    --input-border-color: #334155;
 }
 
 [data-theme="vibrant"] {
     --primary-color: #2e1065;
     --secondary-color: #f97316;
     --accent-color: #ea580c;
-    --background-light: #fae8ff;
-    --background-dark: #fdf4ff;
-    --text-main: #334155;
-    --text-muted: #475569;
-    --card-bg: #ffffff;
-    --card-border: #d8b4fe;
-    --input-bg: #ffffff;
-    --input-border: #e9d5ff;
+    --background-light-color: #fae8ff;
+    --background-dark-color: #fdf4ff;
+    --text-main-color: #334155;
+    --text-muted-color: #475569;
+    --card-bg-color: #ffffff;
+    --card-border-color: #d8b4fe;
+    --input-bg-color: #ffffff;
+    --input-border-color: #e9d5ff;
 }
 
 /* Setup base */
@@ -58,8 +58,8 @@ html {
 
 body {
     font-family: var(--font-sans);
-    color: var(--text-main);
-    background-color: var(--background-dark);
+    color: var(--text-main-color);
+    background-color: var(--background-dark-color);
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
@@ -75,7 +75,7 @@ body {
 h1,
 h2,
 h3 {
-    color: var(--text-main);
+    color: var(--text-main-color);
     line-height: 1.2;
     transition: color var(--transition-speed);
 }
@@ -95,7 +95,31 @@ h3 {
 [data-theme="dark"] h1:not(.name),
 [data-theme="dark"] h2,
 [data-theme="dark"] h3 {
-    color: var(--header-text);
+    color: var(--header-text-color);
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter_24pt-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter_24pt-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter_24pt-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 .section-title {
@@ -120,7 +144,7 @@ h3 {
 /* Header y Nav */
 .header {
     background-color: var(--primary-color);
-    color: var(--header-text);
+    color: var(--header-text-color);
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
@@ -147,7 +171,7 @@ h3 {
     height: 60px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: var(--card-border);
+    background-color: var(--card-border-color);
     border: 2px solid var(--secondary-color);
     flex-shrink: 0;
     transition: border-color var(--transition-speed);
@@ -162,7 +186,7 @@ h3 {
 .name {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--header-text);
+    color: var(--header-text-color);
     letter-spacing: -0.025em;
     line-height: 1.1;
     margin-bottom: 0.2rem;
@@ -170,7 +194,7 @@ h3 {
 
 .subtitle {
     font-size: 0.9rem;
-    color: var(--header-muted);
+    color: var(--header-muted-color);
 }
 
 .nav-links {
@@ -181,7 +205,7 @@ h3 {
 }
 
 .nav-links a {
-    color: var(--header-muted);
+    color: var(--header-muted-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -191,7 +215,7 @@ h3 {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    color: var(--header-text);
+    color: var(--header-text-color);
     outline: 2px solid var(--secondary-color);
     outline-offset: 4px;
     border-radius: 4px;
@@ -217,7 +241,7 @@ h3 {
 .lang-btn {
     background: none;
     border: none;
-    color: var(--header-muted);
+    color: var(--header-muted-color);
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
@@ -229,7 +253,7 @@ h3 {
 
 .lang-btn:hover,
 .lang-btn:focus {
-    color: var(--header-text);
+    color: var(--header-text-color);
     outline: 2px solid var(--secondary-color);
 }
 
@@ -240,7 +264,7 @@ h3 {
 }
 
 .lang-separator {
-    color: var(--header-muted);
+    color: var(--header-muted-color);
     font-size: 0.8rem;
     opacity: 0.5;
 }
@@ -263,7 +287,7 @@ h3 {
 .theme-btn:hover,
 .theme-btn:focus {
     transform: scale(1.1);
-    box-shadow: 0 0 0 2px var(--header-text);
+    box-shadow: 0 0 0 2px var(--header-text-color);
 }
 
 .theme-btn.active {
@@ -287,7 +311,7 @@ h3 {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--header-text);
+    background-color: var(--header-text-color);
     transition: all 0.3s ease-in-out;
     border-radius: 3px;
 }
@@ -299,7 +323,7 @@ h3 {
 }
 
 .bg-light {
-    background-color: var(--background-light);
+    background-color: var(--background-light-color);
 }
 
 /* Skills */
@@ -311,13 +335,13 @@ h3 {
 }
 
 .skill-item {
-    background-color: var(--card-bg);
-    color: var(--text-main);
+    background-color: var(--card-bg-color);
+    color: var(--text-main-color);
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--card-border-color);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
     display: flex;
     align-items: center;
@@ -340,7 +364,7 @@ h3 {
 .timeline {
     position: relative;
     padding-left: 2rem;
-    border-left: 2px solid var(--card-border);
+    border-left: 2px solid var(--card-border-color);
     transition: border-color var(--transition-speed);
 }
 
@@ -361,7 +385,7 @@ h3 {
     height: 20px;
     background-color: var(--secondary-color);
     border-radius: 50%;
-    border: 4px solid var(--background-dark);
+    border: 4px solid var(--background-dark-color);
     transition: background-color var(--transition-speed), border-color var(--transition-speed);
 }
 
@@ -369,7 +393,7 @@ h3 {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
-    color: var(--text-main);
+    color: var(--text-main-color);
     transition: color var(--transition-speed);
 }
 
@@ -382,23 +406,23 @@ h3 {
 
 .job-date {
     font-size: 0.875rem;
-    color: var(--text-muted);
+    color: var(--text-muted-color);
     margin-bottom: 1rem;
     transition: color var(--transition-speed);
 }
 
 .job-description {
-    color: var(--text-muted);
+    color: var(--text-muted-color);
     transition: color var(--transition-speed);
 }
 
 /* Tarjeta de educación */
 .education-card {
-    background: var(--card-bg);
+    background: var(--card-bg-color);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--card-border-color);
     transition: background-color var(--transition-speed), border-color var(--transition-speed);
 }
 
@@ -406,7 +430,7 @@ h3 {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--text-main);
+    color: var(--text-main-color);
     transition: color var(--transition-speed);
 }
 
@@ -418,7 +442,7 @@ h3 {
 }
 
 .education-date {
-    color: var(--text-muted);
+    color: var(--text-muted-color);
     transition: color var(--transition-speed);
 }
 
@@ -430,11 +454,11 @@ h3 {
 }
 
 .project-card {
-    background: var(--card-bg);
+    background: var(--card-bg-color);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--card-border-color);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed), border-color var(--transition-speed);
     display: flex;
     flex-direction: column;
@@ -502,13 +526,13 @@ h3 {
 .project-title {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
-    color: var(--text-main);
+    color: var(--text-main-color);
     transition: color var(--transition-speed);
 }
 
 .project-description {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: var(--text-muted-color);
     margin-bottom: 1rem;
     transition: color var(--transition-speed);
 }
@@ -542,7 +566,7 @@ h3 {
 
 /* Formulario de contacto */
 .contact-section {
-    background-color: var(--background-light);
+    background-color: var(--background-light-color);
     text-align: center;
 }
 
@@ -558,11 +582,11 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    background: var(--card-bg);
+    background: var(--card-bg-color);
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--card-border-color);
     transition: background-color var(--transition-speed), border-color var(--transition-speed);
 }
 
@@ -575,7 +599,7 @@ h3 {
 .form-label {
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--text-main);
+    color: var(--text-main-color);
     transition: color var(--transition-speed);
 }
 
@@ -583,13 +607,13 @@ h3 {
 .form-textarea {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid var(--input-border);
+    border: 1px solid var(--input-border-color);
     border-radius: 6px;
     font-family: inherit;
     font-size: 1rem;
-    color: var(--text-main);
+    color: var(--text-main-color);
     transition: border-color var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
-    background-color: var(--input-bg);
+    background-color: var(--input-bg-color);
 }
 
 .form-input:focus,
@@ -627,7 +651,7 @@ h3 {
 /* Footer */
 .footer {
     background-color: var(--primary-color);
-    color: var(--header-muted);
+    color: var(--header-muted-color);
     text-align: center;
     padding: 2rem 0;
     font-size: 0.875rem;

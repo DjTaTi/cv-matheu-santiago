@@ -10,10 +10,6 @@
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='70' font-size='55' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>MS</text></svg>" />
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Devicon Icons -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
@@ -24,7 +20,7 @@
         <div class="container header-container">
             <div class="profile-wrapper">
                 <div class="profile-image-container">
-                    <img src="assets/img/perfil.jpg" alt="Foto de perfil de Matheu Santiago" class="profile-image"
+                    <img src="assets/img/perfil.webp" alt="Foto de perfil de Matheu Santiago" class="profile-image"
                         id="profile-picture">
                 </div>
                 <div class="profile-info">
@@ -153,29 +149,58 @@
             <div class="container fade-in">
                 <h2 id="skills-heading" class="section-title" data-i18n="skills_title">Habilidades Técnicas</h2>
                 <ul class="skills-list" aria-label="Lista de habilidades técnicas">
-                    <li class="skill-item"><i class="devicon-html5-plain colored" aria-hidden="true"></i> HTML</li>
-                    <li class="skill-item"><i class="devicon-css3-plain colored" aria-hidden="true"></i> CSS</li>
-                    <li class="skill-item"><i class="devicon-javascript-plain colored" aria-hidden="true"></i>
-                        JavaScript</li>
-                    <li class="skill-item"><i class="devicon-typescript-plain colored" aria-hidden="true"></i>
-                        TypeScript</li>
-                    <li class="skill-item"><i class="devicon-python-plain colored" aria-hidden="true"></i> Python</li>
-                    <li class="skill-item"><i class="devicon-django-plain colored" aria-hidden="true"></i> Django</li>
-                    <li class="skill-item"><i class="devicon-java-plain colored" aria-hidden="true"></i> Java</li>
-                    <li class="skill-item"><i class="devicon-spring-original colored" aria-hidden="true"></i> SpringBoot
-                    </li>
-                    <li class="skill-item"><i class="devicon-c-plain colored" aria-hidden="true"></i> C</li>
-                    <li class="skill-item"><i class="devicon-react-original colored" aria-hidden="true"></i> React</li>
-                    <li class="skill-item"><i class="devicon-astro-plain colored" aria-hidden="true"></i> Astro</li>
-                    <li class="skill-item"><i class="devicon-tailwindcss-plain colored" aria-hidden="true"></i> Tailwind
+                    <li class="skill-item"><img src="assets/icons/html5-original.svg" alt="Icono HTML"
+                            class="skill-icon">
+                        HTML</li>
+                    <li class="skill-item"><img src="assets/icons/css3-original.svg" alt="Icono CSS" class="skill-icon">
                         CSS</li>
-                    <li class="skill-item"><i class="devicon-mysql-plain colored" aria-hidden="true"></i> MySQL</li>
-                    <li class="skill-item"><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
-                        PostgreSQL</li>
-                    <li class="skill-item"><i class="devicon-photoshop-plain colored" aria-hidden="true"></i> Photoshop
+                    <li class="skill-item"><img src="assets/icons/javascript-original.svg" alt="Icono JavaScript"
+                            class="skill-icon">
+                        JavaScript</li>
+                    <li class="skill-item"><img src="assets/icons/typescript-original.svg" alt="Icono TypeScript"
+                            class="skill-icon">
+                        TypeScript</li>
+                    <li class="skill-item"><img src="assets/icons/python-original.svg" alt="Icono Python"
+                            class="skill-icon">
+                        Python</li>
+                    <li class="skill-item"><img src="assets/icons/django-plain.svg" alt="Icono Django"
+                            class="skill-icon">
+                        Django</li>
+                    <li class="skill-item"><img src="assets/icons/java-original.svg" alt="Icono Java"
+                            class="skill-icon">
+                        Java</li>
+                    <li class="skill-item"><img src="assets/icons/spring-original.svg" alt="Icono SpringBoot"
+                            class="skill-icon"> SpringBoot
                     </li>
-                    <li class="skill-item"><i class="devicon-illustrator-plain colored" aria-hidden="true"></i>
+                    <li class="skill-item"><img src="assets/icons/c-original.svg" alt="Icono C" class="skill-icon"> C
+                    </li>
+                    <li class="skill-item"><img src="assets/icons/react-original.svg" alt="Icono React"
+                            class="skill-icon">
+                        React</li>
+                    <li class="skill-item"><img src="assets/icons/astro-original.svg" alt="Icono Astro"
+                            class="skill-icon">
+                        Astro</li>
+                    <li class="skill-item"><img src="assets/icons/tailwindcss-original.svg" alt="Icono Tailwind"
+                            class="skill-icon"> Tailwind
+                        CSS</li>
+                    <li class="skill-item"><img src="assets/icons/mysql-original.svg" alt="Icono MySQL"
+                            class="skill-icon">
+                        MySQL</li>
+                    <li class="skill-item"><img src="assets/icons/postgresql-original.svg" alt="Icono PostgreSQL"
+                            class="skill-icon">
+                        PostgreSQL</li>
+                    <li class="skill-item"><img src="assets/icons/photoshop-original.svg" alt="Icono Photoshop"
+                            class="skill-icon"> Photoshop
+                    </li>
+                    <li class="skill-item"><img src="assets/icons/illustrator-original.svg" alt="Icono Illustrator"
+                            class="skill-icon"></i>
                         Illustrator</li>
+                    <li class="skill-item"><img src="assets/icons/premierepro-original.svg" alt="Icono Premiere"
+                            class="skill-icon"></i>
+                        Premiere</li>
+                    <li class="skill-item"><img src="assets/icons/aftereffects-original.svg" alt="Icono After Effects"
+                            class="skill-icon"></i>
+                        After Effects</li>
                     <li class="skill-item">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
                             fill="#217346" aria-hidden="true">
@@ -193,7 +218,7 @@
                 <h2 id="projects-heading" class="section-title" data-i18n="proj_title">Portfolio</h2>
                 <div class="projects-grid">
                     <article class="project-card hover-img">
-                        <div class="project-bg"><img src="assets/img/fines-heat-map.png" alt="Fines Heat Map"></div>
+                        <div class="project-bg"><img src="assets/img/fines-heat-map.webp" alt="Fines Heat Map"></div>
                         <div class="project-info">
                             <h3 class="project-title">Fines Heat Map</h3>
                             <p class="project-description" data-i18n="proj_1_desc">Proyecto orientado a la visualización
@@ -215,7 +240,8 @@
                                 data-i18n="proj_btn">Ver Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
                     </article>
                     <article class="project-card hover-img">
-                        <div class="project-bg"><img src="assets/img/coceres-propiedades.png" alt="Coceres Propiedades">
+                        <div class="project-bg"><img src="assets/img/coceres-propiedades.webp"
+                                alt="Coceres Propiedades">
                         </div>
                         <div class="project-info">
                             <h3 class="project-title">Coceres Propiedades</h3>
@@ -228,7 +254,7 @@
                                 Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
                     </article>
                     <article class="project-card hover-img">
-                        <div class="project-bg"><img src="assets/img/hrs-frontend.png" alt="HRS Frontend"></div>
+                        <div class="project-bg"><img src="assets/img/hrs-frontend.webp" alt="HRS Frontend"></div>
                         <div class="project-info">
                             <h3 class="project-title">HRS (Frontend)</h3>
                             <p class="project-description" data-i18n="proj_4_desc">Interfaz de usuario desarrollada para
@@ -240,7 +266,7 @@
                                 data-i18n="proj_btn">Ver Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
                     </article>
                     <article class="project-card hover-img">
-                        <div class="project-bg"><img src="assets/img/hrs-backend.png" alt="HRS Backend"></div>
+                        <div class="project-bg"><img src="assets/img/hrs-backend.webp" alt="HRS Backend"></div>
                         <div class="project-info">
                             <h3 class="project-title">HRS (Backend)</h3>
                             <p class="project-description" data-i18n="proj_5_desc">Lógica de servidor, base de datos y
@@ -252,7 +278,8 @@
                                 data-i18n="proj_btn">Ver Repositorio</span> <span aria-hidden="true">&rarr;</span></a>
                     </article>
                     <article class="project-card hover-img">
-                        <div class="project-bg"><img src="assets/img/hrs-landing-page.png" alt="HRS Landing Page"></div>
+                        <div class="project-bg"><img src="assets/img/hrs-landing-page.webp" alt="HRS Landing Page">
+                        </div>
                         <div class="project-info">
                             <h3 class="project-title">HRS Landing Page</h3>
                             <p class="project-description" data-i18n="proj_6_desc">Página de aterrizaje publicitaria

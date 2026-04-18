@@ -56,12 +56,12 @@
                             <button id="lang-en" class="lang-btn" aria-label="Switch to English">EN</button>
                         </div>
                         <div class="theme-toggle">
-                            <button class="theme-btn" data-theme-btn="light" aria-label="Tema Claro"
-                                style="background:#f8fafc; border: 2px solid #cbd5e1;"></button>
-                            <button class="theme-btn" data-theme-btn="dark" aria-label="Tema Oscuro"
-                                style="background:#0f172a; border: 2px solid #0ea5e9;"></button>
-                            <button class="theme-btn" data-theme-btn="vibrant" aria-label="Tema Vibrante"
-                                style="background:#2e1065; border: 2px solid #f97316;"></button>
+                            <button class="theme-btn theme-btn-light" data-theme-btn="light"
+                                aria-label="Tema Claro"></button>
+                            <button class="theme-btn theme-btn-dark" data-theme-btn="dark"
+                                aria-label="Tema Oscuro"></button>
+                            <button class="theme-btn theme-btn-vibrant" data-theme-btn="vibrant"
+                                aria-label="Tema Vibrante"></button>
                         </div>
                     </li>
                 </ul>
@@ -85,11 +85,11 @@
         <section id="education" class="section education-section bg-light" aria-labelledby="education-heading">
             <div class="container fade-in">
                 <h2 id="education-heading" class="section-title" data-i18n="edu_title">Estudios</h2>
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="education-container">
                     <div class="education-card">
                         <h3 class="degree-title" data-i18n="edu_degree">Tecnicatura Universitaria en Programación</h3>
                         <a href="https://www.frlp.utn.edu.ar" target="_blank" rel="noopener noreferrer"
-                            style="color: var(--secondary-color); text-decoration: none;" class="institution">UTN
+                            class="institution">UTN
                             Facultad Regional La Plata</a>
                         <p class="education-date"><span data-i18n="edu_status">Estudiante de segundo año (Desde</span>
                             <time datetime="2025">2025</time>)
@@ -125,8 +125,7 @@
                             <h3 class="job-title" data-i18n="exp_job2_title">Empleado Administrativo</h3>
                             <p class="job-company">
                                 <a href="https://www.gba.gob.ar/secretariageneral" target="_blank"
-                                    rel="noopener noreferrer"
-                                    style="color: var(--secondary-color); text-decoration: none;"
+                                    rel="noopener noreferrer" class="institution"
                                     data-i18n="exp_job2_company">Secretaría General de la Gobernación de la Provincia de
                                     Buenos Aires</a>
                             </p>
@@ -136,8 +135,7 @@
                                 organización y gestión dentro del organismo, demostrando constancia y capacidad de
                                 adaptación.</p>
                             <p class="job-contact">
-                                <a href="mailto:privada.secretariageneral@sg.gba.gob.ar" class="project-link"
-                                    style="font-size: 0.9rem;">
+                                <a href="mailto:privada.secretariageneral@sg.gba.gob.ar" class="project-link">
                                     privada.secretariageneral@sg.gba.gob.ar
                                 </a>
                             </p>
@@ -311,7 +309,7 @@
                         <label for="message" class="form-label" data-i18n="contact_msg_label">Mensaje</label>
                         <textarea id="message" name="message" class="form-textarea" required></textarea>
                     </div>
-                    <p id="form-status" style="margin: 0; font-weight: 600; font-size: 0.95rem;"></p>
+                    <p id="form-status" class="form-status"></p>
                     <button type="submit" class="btn-submit" data-i18n="contact_btn">Enviar Mensaje</button>
                 </form>
             </div>
